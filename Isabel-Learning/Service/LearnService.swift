@@ -8,6 +8,37 @@
 import Foundation
 class LearnService
 {
+    
+    static func GetLearningStyle()-> Data
+    {
+        var dtStyle = Data()
+        //GET THE BUNDLE PATH
+        let pathStyle = Bundle.main.path(forResource: "style", ofType: "html")
+        
+        guard(pathStyle != nil) else
+        {
+            return dtStyle
+        }
+        
+        //GET THE URL PATH
+        let urlPathStyle = URL.init(fileURLWithPath: pathStyle!)
+        
+        do
+        {
+            dtStyle = try Data(contentsOf: urlPathStyle)
+            
+        }
+        
+        //GET THE DECODE OBJECT
+        catch
+        {
+            print(error)
+        }
+        
+        return dtStyle
+        
+        
+    }
     static func GetLearningList()-> [Learn]
     {
         var learnList : [Learn] = [Learn]()
@@ -40,6 +71,8 @@ class LearnService
             }
             
         }
+        
+        
         //GET THE DECODE OBJECT
         catch
         {

@@ -11,6 +11,7 @@
 		ED37CB5027AC315700577F10 /* LearnService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED37CB4F27AC315700577F10 /* LearnService.swift */; };
 		ED3E0D1127B472DA00FF3332 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED3E0D1027B472DA00FF3332 /* AVKit.framework */; };
 		ED3E0D1327B5376C00FF3332 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3E0D1227B5376C00FF3332 /* ButtonView.swift */; };
+		ED3E0D3127B80AAD00FF3332 /* LessonExplanation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3E0D3027B80AAD00FF3332 /* LessonExplanation.swift */; };
 		ED4932FA27B068E70020353E /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4932F927B068E70020353E /* Card.swift */; };
 		ED4932FC27B1D2B10020353E /* LessonList.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4932FB27B1D2B10020353E /* LessonList.swift */; };
 		ED4932FE27B3E9A80020353E /* LessonDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4932FD27B3E9A80020353E /* LessonDetail.swift */; };
@@ -28,6 +29,7 @@
 		ED37CB4F27AC315700577F10 /* LearnService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnService.swift; sourceTree = "<group>"; };
 		ED3E0D1027B472DA00FF3332 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		ED3E0D1227B5376C00FF3332 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
+		ED3E0D3027B80AAD00FF3332 /* LessonExplanation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonExplanation.swift; sourceTree = "<group>"; };
 		ED4932F927B068E70020353E /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		ED4932FB27B1D2B10020353E /* LessonList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonList.swift; sourceTree = "<group>"; };
 		ED4932FD27B3E9A80020353E /* LessonDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonDetail.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 				ED4932FB27B1D2B10020353E /* LessonList.swift */,
 				ED4932FD27B3E9A80020353E /* LessonDetail.swift */,
 				ED3E0D1227B5376C00FF3332 /* ButtonView.swift */,
+				ED3E0D3027B80AAD00FF3332 /* LessonExplanation.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -223,6 +226,7 @@
 				ED67EC1327A95EDB0049B023 /* LibraryHome.swift in Sources */,
 				ED4932FC27B1D2B10020353E /* LessonList.swift in Sources */,
 				ED4932FE27B3E9A80020353E /* LessonDetail.swift in Sources */,
+				ED3E0D3127B80AAD00FF3332 /* LessonExplanation.swift in Sources */,
 				ED37CB4D27AC30FC00577F10 /* LearnViewModel.swift in Sources */,
 				ED67EC1127A95EDB0049B023 /* Isabel_LearningApp.swift in Sources */,
 				ED67EC2727A9FEF10049B023 /* Learn.swift in Sources */,
