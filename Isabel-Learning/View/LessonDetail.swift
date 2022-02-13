@@ -11,7 +11,7 @@ import AVKit
 struct LessonDetail: View {
     @EnvironmentObject var learnList : LearnViewModel
     @State var lessonEnd : Bool = false
-  
+    @State var lessonFinish : Bool = false
     
     var body: some View {
         
@@ -35,10 +35,16 @@ struct LessonDetail: View {
                 Button {
                     
                     learnList.setCurrentLesson(lessonID: learnList.currentLesson!.id+1)
-                     if(learnList.currentLesson!.id+1 >= learnList.currentModule!.content.lessons.count)
+                    if(learnList.currentLesson!.id+1 >= learnList.currentModule!.content.lessons.count)
                     {
                         lessonEnd = true
                     }
+                   if(lessonEnd == true && lessonFinish == true)
+                    {
+                       learnList.homeTabIndex = nil
+                   }
+                    
+                   
                  
                 }
                 
@@ -49,6 +55,15 @@ struct LessonDetail: View {
                     {
                         ButtonView(buttonText: "Next Lesson", buttonForeColor: Color.green)
                     }
+                    if(lessonEnd == true)
+                    {
+                        ButtonView(buttonText: "Complete", buttonForeColor: Color.orange)
+                            .onAppear {
+                                lessonFinish = true
+                            }
+                        
+                    }
+                    
                 }
             .onAppear {
                 validNextButton()
@@ -67,6 +82,7 @@ struct LessonDetail: View {
         if(learnList.currentLesson!.id+1 == learnList.currentModule!.content.lessons.count)
         {
             lessonEnd = true
+            lessonFinish = true
         }
         
         

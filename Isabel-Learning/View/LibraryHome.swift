@@ -12,6 +12,7 @@ struct LibraryHome: View {
     //@ObservedObject var learnList: LearnViewModel = LearnViewModel()
     
     @EnvironmentObject var learnList : LearnViewModel
+   
     
     var body: some View {
         
@@ -42,15 +43,25 @@ struct LibraryHome: View {
 //
                        
 
-                        NavigationLink {
+//                        NavigationLink {
+//                            LessonList()
+//                                .onAppear {
+//                                    learnList.setCurrentModule(contentID: modeule.id)
+//                                }
+//                            
+//                        } label: {
+//                            Card(image: modeule.content.image, title: modeule.category + " Learn", description: modeule.content.description, lesson: String(modeule.content.lessons.count) + " Lessons", time: modeule.content.time)
+//                        }
+                        
+                        NavigationLink(tag: modeule.id, selection: $learnList.homeTabIndex) {
                             LessonList()
                                 .onAppear {
                                     learnList.setCurrentModule(contentID: modeule.id)
                                 }
-                            
                         } label: {
                             Card(image: modeule.content.image, title: modeule.category + " Learn", description: modeule.content.description, lesson: String(modeule.content.lessons.count) + " Lessons", time: modeule.content.time)
                         }
+
 
                         
                         Card(image: modeule.test.image, title: modeule.category + " Test", description: modeule.test.description, lesson: String(modeule.test.questions.count)+" Questions", time: modeule.test.time)

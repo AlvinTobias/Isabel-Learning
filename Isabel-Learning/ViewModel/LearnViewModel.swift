@@ -20,6 +20,8 @@ class LearnViewModel : ObservableObject
     
     var styleData : Data?
     
+    @Published var homeTabIndex : Int?
+    
     
     init()
     {
@@ -38,11 +40,14 @@ class LearnViewModel : ObservableObject
     
     func setCurrentLesson(lessonID :Int)
     {
+        if(lessonID < currentModule!.content.lessons.count)
+        {
+        
         self.currentExplanation = NSAttributedString()
         self.currentLesson = currentModule?.content.lessons[lessonID]
         currentLessonIndex = lessonID
         self.currentExplanation = setAttributedToString(htmlString: self.currentLesson!.explanation)
-        
+        }
         
     }
 //    func setNextLesson(lessonID :Int)
