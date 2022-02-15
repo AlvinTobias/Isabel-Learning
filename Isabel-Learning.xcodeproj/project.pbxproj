@@ -15,6 +15,7 @@
 		ED4932FA27B068E70020353E /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4932F927B068E70020353E /* Card.swift */; };
 		ED4932FC27B1D2B10020353E /* LessonList.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4932FB27B1D2B10020353E /* LessonList.swift */; };
 		ED4932FE27B3E9A80020353E /* LessonDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4932FD27B3E9A80020353E /* LessonDetail.swift */; };
+		ED64619927B9B2F20053740C /* QuestionList.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED64619827B9B2F20053740C /* QuestionList.swift */; };
 		ED67EC1127A95EDB0049B023 /* Isabel_LearningApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED67EC1027A95EDB0049B023 /* Isabel_LearningApp.swift */; };
 		ED67EC1327A95EDB0049B023 /* LibraryHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED67EC1227A95EDB0049B023 /* LibraryHome.swift */; };
 		ED67EC1527A95EDC0049B023 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED67EC1427A95EDC0049B023 /* Assets.xcassets */; };
@@ -33,6 +34,7 @@
 		ED4932F927B068E70020353E /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		ED4932FB27B1D2B10020353E /* LessonList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonList.swift; sourceTree = "<group>"; };
 		ED4932FD27B3E9A80020353E /* LessonDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonDetail.swift; sourceTree = "<group>"; };
+		ED64619827B9B2F20053740C /* QuestionList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionList.swift; sourceTree = "<group>"; };
 		ED67EC0D27A95EDB0049B023 /* Isabel-Learning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Isabel-Learning.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED67EC1027A95EDB0049B023 /* Isabel_LearningApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Isabel_LearningApp.swift; sourceTree = "<group>"; };
 		ED67EC1227A95EDB0049B023 /* LibraryHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryHome.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				ED4932FD27B3E9A80020353E /* LessonDetail.swift */,
 				ED3E0D1227B5376C00FF3332 /* ButtonView.swift */,
 				ED3E0D3027B80AAD00FF3332 /* LessonExplanation.swift */,
+				ED64619827B9B2F20053740C /* QuestionList.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -229,6 +232,7 @@
 				ED3E0D3127B80AAD00FF3332 /* LessonExplanation.swift in Sources */,
 				ED37CB4D27AC30FC00577F10 /* LearnViewModel.swift in Sources */,
 				ED67EC1127A95EDB0049B023 /* Isabel_LearningApp.swift in Sources */,
+				ED64619927B9B2F20053740C /* QuestionList.swift in Sources */,
 				ED67EC2727A9FEF10049B023 /* Learn.swift in Sources */,
 				ED3E0D1327B5376C00FF3332 /* ButtonView.swift in Sources */,
 			);

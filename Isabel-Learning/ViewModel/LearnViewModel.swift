@@ -21,6 +21,10 @@ class LearnViewModel : ObservableObject
     var styleData : Data?
     
     @Published var homeTabIndex : Int?
+    @Published var homeTabTestIndex : Int?
+    
+    @Published var currentQuestion : Questions?
+    @Published var currentQuestionIndex : Int = 0
     
     
     init()
@@ -37,6 +41,24 @@ class LearnViewModel : ObservableObject
         
         
     }
+    func setCurrentModuleQuestion(contentID :Int,currentQuest : Int )
+    {
+        
+        self.currentModule = learningList[contentID]
+        currentModuleindex = contentID
+        if(currentModule!.test.questions.count > currentQuest)
+        {
+            self.currentQuestion = currentModule!.test.questions[currentQuest]
+            self.currentQuestionIndex = currentQuest
+            self.currentExplanation = setAttributedToString(htmlString: self.currentQuestion!.content)
+        }
+        else
+        {
+            currentQuestion = nil
+            currentQuestionIndex = -1
+        }
+        
+    }
     
     func setCurrentLesson(lessonID :Int)
     {
@@ -47,6 +69,7 @@ class LearnViewModel : ObservableObject
         self.currentLesson = currentModule?.content.lessons[lessonID]
         currentLessonIndex = lessonID
         self.currentExplanation = setAttributedToString(htmlString: self.currentLesson!.explanation)
+            
         }
         
     }

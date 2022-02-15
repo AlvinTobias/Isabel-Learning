@@ -21,15 +21,15 @@ struct LessonDetail: View {
             {
                 
                 
-            Text(learnList.currentLesson!.title)
-           let urllink = URL(string: "https://www.youtube.com/watch?v=qZjLORfD4ZA")
-            VideoPlayer(player: AVPlayer(url: urllink!))
+                Text(learnList.currentLesson!.title)
+                let urllink = URL(string: "https://www.youtube.com/watch?v=qZjLORfD4ZA")
+                VideoPlayer(player: AVPlayer(url: urllink!))
                 if(learnList.currentExplanation.length > 0)
                 {
-                   
+                    
                     LessonExplanation()
-                
-                        
+                    
+                    
                 }
                 
                 Button {
@@ -39,38 +39,38 @@ struct LessonDetail: View {
                     {
                         lessonEnd = true
                     }
-                   if(lessonEnd == true && lessonFinish == true)
+                    if(lessonEnd == true && lessonFinish == true)
                     {
-                       learnList.homeTabIndex = nil
-                   }
+                        learnList.homeTabIndex = nil
+                    }
                     
-                   
-                 
+                    
+                    
                 }
                 
                 
                 
             label: {
-                    if(lessonEnd == false)
-                    {
-                        ButtonView(buttonText: "Next Lesson", buttonForeColor: Color.green)
-                    }
-                    if(lessonEnd == true)
-                    {
-                        ButtonView(buttonText: "Complete", buttonForeColor: Color.orange)
-                            .onAppear {
-                                lessonFinish = true
-                            }
-                        
-                    }
+                if(lessonEnd == false)
+                {
+                    ButtonView(buttonText: "Next Lesson", buttonForeColor: Color.green)
+                }
+                if(lessonEnd == true)
+                {
+                    ButtonView(buttonText: "Complete", buttonForeColor: Color.orange)
+                        .onAppear {
+                            lessonFinish = true
+                        }
                     
                 }
+                
+            }
             .onAppear {
                 validNextButton()
-               
+                
             }
-            
-            Spacer()
+                
+                Spacer()
             }
             
         }
@@ -89,8 +89,8 @@ struct LessonDetail: View {
         
     }
     
-   
-        
+    
+    
 }
 
 struct LessonDetail_Previews: PreviewProvider {

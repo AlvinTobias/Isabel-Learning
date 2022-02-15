@@ -31,28 +31,6 @@ struct LibraryHome: View {
                 {
                     ForEach(learnList.learningList){ modeule in
                         
-//                        NavigationLink (destination:
-//                            LessonList()
-//                                            .onAppear(perform: {
-//                            learnList.setCurrentModule(contentID: modeule.id)
-//                        })
-//                        ,label: {
-//
-//                            Card(image: modeule.content.image, title: modeule.category + " Learn", description: modeule.content.description, lesson: String(modeule.content.lessons.count) + " Lessons", time: modeule.content.time)
-//                        })
-//
-                       
-
-//                        NavigationLink {
-//                            LessonList()
-//                                .onAppear {
-//                                    learnList.setCurrentModule(contentID: modeule.id)
-//                                }
-//                            
-//                        } label: {
-//                            Card(image: modeule.content.image, title: modeule.category + " Learn", description: modeule.content.description, lesson: String(modeule.content.lessons.count) + " Lessons", time: modeule.content.time)
-//                        }
-                        
                         NavigationLink(tag: modeule.id, selection: $learnList.homeTabIndex) {
                             LessonList()
                                 .onAppear {
@@ -63,8 +41,18 @@ struct LibraryHome: View {
                         }
 
 
+                        NavigationLink(tag: modeule.id, selection: $learnList.homeTabTestIndex) {
+                          QuestionList()
+                                .onAppear {
+                                    learnList.setCurrentModuleQuestion(contentID: modeule.id, currentQuest: 0)
+                                    
+                                }
+
+                        } label: {
+                            Card(image: modeule.test.image, title: modeule.category + " Test", description: modeule.test.description, lesson: String(modeule.test.questions.count)+" Questions", time: modeule.test.time)
+                        }
                         
-                        Card(image: modeule.test.image, title: modeule.category + " Test", description: modeule.test.description, lesson: String(modeule.test.questions.count)+" Questions", time: modeule.test.time)
+//                        Card(image: modeule.test.image, title: modeule.category + " Test", description: modeule.test.description, lesson: String(modeule.test.questions.count)+" Questions", time: modeule.test.time)
                         
                     }
                     
