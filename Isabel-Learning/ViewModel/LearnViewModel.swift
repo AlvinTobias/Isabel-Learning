@@ -29,8 +29,12 @@ class LearnViewModel : ObservableObject
     
     init()
     {
-        self.learningList = LearnService.GetLearningList()
+        //self.learningList = [Learn]()
+       self.learningList = LearnService.GetLearningList()
         self.styleData = LearnService.GetLearningStyle()
+        GetLearningListNetwork()
+        
+        
     }
     
     func setCurrentModule(contentID :Int)
@@ -123,6 +127,69 @@ class LearnViewModel : ObservableObject
 //
        
         return result
+    }
+    
+     func GetLearningListNetwork()
+    {
+        var learnList : [Learn] = [Learn]()
+        
+        //GET THE URL STRING PATH
+        let urlString = "https://alvintobias.github.io/Isabel-Learning-Data/data2.json"
+        
+        //GET THE URL OBJECT
+        let urlObject = URL(string: urlString)
+        
+        guard urlObject != nil else{
+            return
+        }
+        
+        //CREATE A URL REQUEST
+        let request = URLRequest(url: urlObject!)
+        
+        
+        //GET THE SESSION, Session handles the response , request
+        
+        let session = URLSession.shared
+        
+        //Session data return is data,response status, error
+        let datatask = session.dataTask(with: request) { data, response, error in
+//            //CHECK if there is any error
+            guard error == nil else
+            {
+                return
+            }
+            
+            //Handle the response
+            
+        
+                
+                let jsonLibraryDecoder = JSONDecoder()
+                
+                do
+                {
+                    learnList = try jsonLibraryDecoder.decode([Learn].self, from: data!)
+                    self.learningList += learnList
+                    //self.learningList.shuffle()
+                }
+                catch
+                {
+                    print(error)
+                }
+                
+            
+            
+            
+        }
+        //Kick of the Datatask
+        datatask.resume()
+        
+        
+        
+        
+        
+        
+        
+        
     }
     
     

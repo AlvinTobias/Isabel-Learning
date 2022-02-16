@@ -83,4 +83,66 @@ class LearnService
         return learnList
         
     }
+    
+//    static func GetLearningListNetwork()-> [Learn]
+//    {
+//        var learnList : [Learn] = [Learn]()
+//        
+//        //GET THE URL STRING PATH
+//        let urlString = "https://alvintobias.github.io/Isabel-Learning-Data/data2.json"
+//        
+//        //GET THE URL OBJECT
+//        let urlObject = URL(string: urlString)
+//        
+//        guard urlObject != nil else{
+//            return learnList
+//        }
+//        
+//        //CREATE A URL REQUEST
+//        let request = URLRequest(url: urlObject!)
+//        
+//        
+//        //GET THE SESSION, Session handles the response , request
+//        
+//        let session = URLSession.shared
+//        
+//        //Session data return is data,response status, error
+//        let datatask = session.dataTask(with: request) { data, response, error in
+//            //CHECK if there is any error
+////            guard error != nil else
+////            {
+////                return
+////            }
+//            
+//            //Handle the response
+//            
+//        
+//                
+//                let jsonLibraryDecoder = JSONDecoder()
+//                
+//                do
+//                {
+//                    learnList = try jsonLibraryDecoder.decode([Learn].self, from: data!)
+//                    
+//                }
+//                catch
+//                {
+//                    print(error)
+//                }
+//                
+//            
+//            
+//            
+//        }
+//        //Kick of the Datatask
+//        datatask.resume()
+//        
+//        
+//        
+//        
+//        
+//        
+//        
+//        return learnList
+//    }
 }
