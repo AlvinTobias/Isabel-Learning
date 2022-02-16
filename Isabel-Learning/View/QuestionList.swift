@@ -123,23 +123,23 @@ struct QuestionList: View {
                  
                     if (myScore < 3)
                     {
-                        Text("Tell your parents to buy some buffolo instead of paying for your studies..!")
+                        Text("Study & Retake..!")
                             .font(.title2)
                             .foregroundColor(.red)
                     }
                     else if (myScore >= 3 && myScore < 5)
                     {
-                        Text("Hmm..Please study again...!").font(.title)
+                        Text("Retake...!").font(.title)
                             .foregroundColor(.red)
                     }
                     else if (myScore >= 5 && myScore < 8)
                     {
-                        Text("Ok.. Needs to Work Hard...!").font(.title)
+                        Text("Good...!").font(.title)
                             .foregroundColor(.yellow)
                     }
                     else if (myScore >= 8 && myScore < 10)
                     {
-                        Text("Good Job..").font(.title)
+                        Text("Very Good...").font(.title)
                             .foregroundColor(.green)
                     }
                     else
