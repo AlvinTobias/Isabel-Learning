@@ -168,7 +168,12 @@ class LearnViewModel : ObservableObject
                 do
                 {
                     learnList = try jsonLibraryDecoder.decode([Learn].self, from: data!)
-                    self.learningList += learnList
+                    
+                    //INSTEAD OF THE BACKGROUND JOB TO UPDATE THE MAIN UI SET THE MAIN THREAD TO HANDLE THIS
+                    DispatchQueue.main.async {
+                        self.learningList += learnList
+                    }
+                    
                     //self.learningList.shuffle()
                 }
                 catch
